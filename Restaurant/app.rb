@@ -100,4 +100,47 @@ delete '/parties/:id' do
 end 
 
 
+#orders
+get '/orders' do 
+   @orders = Order.all 
+   erb :'orders/index'  
+end 
+
+
+get '/orders/new' do 
+   erb :'orders/new' 
+end 
+
+post '/orders' do 
+	new_order = params['order_id']
+	Order.create({id: new_order})
+	redirect '/orders'
+end 
+
+get '/orders/:id' do 
+	@orders = Order.find(params[:id])
+	erb :'orders/show'  
+end 
+
+get '/orders/:id/edit' do 
+	@orders = Order.find(params[:id])
+	erb :'orders/edit' 
+end 
+
+patch '/orders/:id' do 
+	order = Order.find(params[:id])
+	new_cusine = params['cusine_name']
+	profile.update({cusine_type: new_cusine})
+	redirect '/orders'
+end 
+
+delete '/orders/:id' do 
+	order = Order.find(params[:id])
+	order.destroy 
+	redirect '/orders'
+end 
+
+
+
+
 

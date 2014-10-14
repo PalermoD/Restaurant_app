@@ -1,0 +1,13 @@
+<header> <h1>RESTUARANT APP</h1> </header> 
+
+<a href="/orders/new">New Order</a>
+
+<ul>
+   <% @orders.each do |order| %> 
+    <li>
+     <a href="/orders/<%= order.id %>">
+	 <%=   order.id  %> 
+	 </a>
+   </li>
+  <% end %> 
+</ul>

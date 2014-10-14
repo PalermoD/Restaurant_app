@@ -1,0 +1,13 @@
+<header> <h1>RESTUARANT APP</h1> </header> 
+
+<a href="/parties/new">New Party</a>
+
+<ul>
+   <% @parties.each do |party| %> 
+    <li>
+     <a href="/parties/<%= party.id %>">
+	 <%=   party.table_number  %> 
+	 </a>
+   </li>
+  <% end %> 
+</ul>

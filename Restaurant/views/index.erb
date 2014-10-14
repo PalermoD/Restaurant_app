@@ -1,0 +1,14 @@
+<header> <h1>RESTUARANT APP</h1> </header> 
+
+<a href="/foods/new">New Food</a>
+
+<ul>
+   <% @foods.each do |cusine| %> 
+    <li>
+     <a href="/food/<%= food.id %>">
+	 <%=   cusine.cusine_type  %> 
+	 </a>
+   </li>
+  <% end %> 
+</ul>
+ 

@@ -1,12 +1,19 @@
-<h2><%= @order.id %></h2>
+<h2><%= @orders.id %></h2>
+<h2><%= @foods.cusine_type %></h2>
+<h2><%= @foods.price %></h2>
+<h2><%= @foods.allergens %></h2>
+<h2><%= @parties.table_number %></h2>
+<h2><%= @parties.guest_number %></h2>
+<h2><%= @parties.paid %></h2>
 
 
 
 
 
-<a href="/orders/<%= @order.id %>/edit">Edit</a>
+<a href="/orders/<%= @orders.id %>/edit">Edit</a>
 
-<form action="/orders/<%= @order.id %>" method="post">
+<form action="/orders/<%= @orders.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<input type="submit" value="Delete!">
 </form>
+

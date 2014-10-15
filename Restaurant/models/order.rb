@@ -1,4 +1,4 @@
 class Order < ActiveRecord::Base 
-	belongs_to(:foods)
-    belongs_to(:parties)
+	belongs_to(:food)
+    belongs_to(:party)
 end 

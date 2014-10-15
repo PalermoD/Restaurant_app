@@ -18,7 +18,7 @@
    <% @foods.each do |cusine| %> 
     <li>
      <a href="/foods/<%= cusine.id %>">
-	 <%=   cusine.cusine_type  %> 
+	  <%=   cusine.id  %> <%=   cusine.name  %> 
 	 </a>
    </li> 
   <% end %> 

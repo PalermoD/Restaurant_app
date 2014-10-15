@@ -12,7 +12,7 @@ Dir[ROOT_PATH+"/models/*.rb"].each{ |file| require file }
 
 
 get '/' do 
-	"welcome to the best FU#KING restarant app EVER!!!"
+	
 	@parties = Party.all 
 	erb :index 
 end 
@@ -28,10 +28,12 @@ get '/foods/new' do
 end 
 
 post '/foods' do 
-	new_cusine = params['cusine_name']
+	new_id = params['food_id']
+	new_name = params['name']
+	new_cusine = params['cusine_type']
 	new_price = params['cusine_price']
 	new_allergens = params['cusine_allergens']
-	Food.create({cusine_type: new_cusine, price: new_price, allergens: new_allergens })
+	Food.create({id: new_id, name: new_name, cusine_type: new_cusine, price: new_price, allergens: new_allergens })
 	redirect '/foods'
 end 
 
@@ -134,7 +136,7 @@ end
 patch '/orders/:id' do 
 	order = Order.find(params[:id])
 	new_cusine = params['cusine_name']
-	profile.update({cusine_type: new_cusine})
+	order.update({cusine_type: new_cusine})
 	redirect '/orders'
 end 
 

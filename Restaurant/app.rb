@@ -13,6 +13,7 @@ Dir[ROOT_PATH+"/models/*.rb"].each{ |file| require file }
 
 get '/' do 
 	"welcome to the best FU#KING restarant app EVER!!!"
+	@parties = Party.all 
 	erb :index 
 end 
 

@@ -1,6 +1,8 @@
-<header> <h1>RESTUARANT APP</h1> </header> 
-
+<header> <h1>RESTAURANT APP</h1> </header> 
+<a href="/">Home</a>
 <a href="/foods/new">New Food</a>
+<a href="/parties/new">New Party</a>
+<a href="/orders/new">New Order</a>
 
 <ul>
    <% @foods.each do |cusine| %> 
@@ -8,7 +10,9 @@
      <a href="/foods/<%= cusine.id %>">
 	 <%=   cusine.cusine_type  %> 
 	 </a>
-   </li>
+   </li> 
   <% end %> 
 </ul>
+
+
  

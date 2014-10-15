@@ -13,6 +13,7 @@ Dir[ROOT_PATH+"/models/*.rb"].each{ |file| require file }
 
 get '/' do 
 	"welcome to the best FU#KING restarant app EVER!!!"
+	erb :index 
 end 
 
 get '/foods' do 
@@ -46,7 +47,7 @@ end
 patch '/foods/:id' do 
 	food = Food.find(params[:id])
 	new_cusine = params['cusine_name']
-	profile.update({cusine_type: new_cusine})
+	food.update({cusine_type: new_cusine})
 	redirect '/foods'
 end 
 

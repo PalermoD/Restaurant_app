@@ -1,24 +1,17 @@
+<h1>ORDERS</h1>
+
+<a href="/">Home</a>
+<a href="/foods/new">New Food</a>
+<a href="/parties/new">New Party</a>
+<a href="/orders">ORDERS</a>
+
+
 <form action="/orders" method="post">
 	<input type="text" name= "order_id" placeholder="Order" >
-	<input type="submit">
-</form>
-
-<h1>PARTY</h1> 
-<form action="/parties" method="post">
-	<input type="text" name= "table_number" placeholder="Table Number" >
-	<input type="text" name="guest_number" placeholder="Guest Number">
-	<input type="text" name="paid" placeholder= "paid">
+	<input type="text" name="foods_id" placeholder="FOOD ID">
+	<input type="text" name="parties_id" placeholder= "PARTY ID">
 	<input type="submit">
 </form>
 
 
-<h1>FOOD & DRINKS </h1>  
-<form action="/foods" method="post">
-	<input type="text" name= "cusine_name" placeholder="Name" >
-	<input type="text" name="cusine_price" placeholder="Price">
-	<input type="text" name="cusine_allergens" placeholder= "allergens">
-	<input type="submit">
-</form>
 
-
-<a href="/orders">ORDERS</a>

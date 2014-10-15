@@ -49,8 +49,12 @@ end
 
 patch '/foods/:id' do 
 	food = Food.find(params[:id])
-	new_cusine = params['cusine_name']
-	food.update({cusine_type: new_cusine})
+	new_id = params['food_id']
+	new_name = params['name']
+	new_cusine = params['cusine_type']
+	new_price = params['cusine_price']
+	new_allergens = params['cusine_allergens']
+	food.update({id: new_id, name: new_name, cusine_type: new_cusine, price: new_price, allergens: new_allergens })
 	redirect '/foods'
 end 
 

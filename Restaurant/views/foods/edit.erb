@@ -21,11 +21,11 @@
 
 <form action="/foods/<%= @foods.id %>" method="post">
 	<input type="hidden" name="_method" value="patch">
-	<input type="text" name= "food_id" value= "<%= @foods.id %>" >
-	<input type="text" name= "cusine_name"  value= "<%= @foods.name %>">
-	<input type="text" name= "cusine_type" value= "<%= @foods.cusine_type %>" >
-	<input type="text" name="cusine_price" value= "<%= @foods.price %>">
-	<input type="text" name="cusine_allergens" value= "<%= @foods.allergens %>">
+	<input type="text" name= "food_id" value= "<%= @foods.id %>" placeholder= "Food ID" >
+	<input type="text" name= "name"  value= "<%= @foods.name %>" placeholder= "Name" >
+	<input type="text" name= "cusine_type" value= "<%= @foods.cusine_type %>" placeholder= "Cusine" > 
+	<input type="text" name="cusine_price" value= "<%= @foods.price %>" placeholder= "Price" >
+	<input type="text" name="cusine_allergens" value= "<%= @foods.allergens %>" placeholder= "allergens" >
 	
 	<input type="submit">
 

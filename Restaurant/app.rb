@@ -96,8 +96,11 @@ end
 
 patch '/parties/:id' do 
 	party = Party.find(params[:id])
-	new_cusine = params['cusine_name']
-	profile.update({cusine_type: new_cusine})
+	new_id = params['party_id']
+	new_table = params['table_number']
+	new_guest = params['guest_number']
+	paid = params['paid']
+	party.update({id: new_id, table_number: new_table, guest_number: new_guest, paid: paid })
 	redirect '/parties'
 end 
 

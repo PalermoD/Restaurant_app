@@ -153,6 +153,25 @@ delete '/orders/:id' do
 	redirect '/orders'
 end 
 
+#reciept shit 
+get '/parties/:id/receipt' do
+	@orders = Order.find(params[:id])
+	@parties = Party.find(params[:id])
+	@foods = Food.find(params[:id])
+	 @receipt = File.open('receipt.txt', 'w') do |f|
+      f.write @foods.name
+      
+      
+      
+     attachment "receipt.txt"
+    end 
+    send_file 'receipt.txt'
+    erb :'parties/reciept'
+   
+end 
+
+
+
 
 
 

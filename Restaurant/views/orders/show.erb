@@ -19,6 +19,7 @@
 
 
 <h2><%= @orders.id %></h2>
+<h2><%= @foods.name %></h2> 
 <h2><%= @foods.cusine_type %></h2>
 <h2><%= @foods.price %></h2>
 <h2><%= @foods.allergens %></h2>
@@ -28,7 +29,7 @@
 
 
 
-
+<a href="/parties/<%= @orders.id %>/receipt">Receipt</a>
 
 <a href="/orders/<%= @orders.id %>/edit">Edit</a>
 

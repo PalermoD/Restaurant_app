@@ -1,5 +1,8 @@
 <h1>RESTAURANT APP</h1>
 
+
+
+
 <a href="/">Home</a>
 
 <a href="/foods">Menu</a>
@@ -14,11 +17,12 @@
 
 <a href="/orders">Orders</a>
 
+<h1>Parties</h1>
 <ul>
    <% @parties.each do |party| %> 
     <li>
      <a href="/parties/<%= party.id %>">
-	 <%=   party.table_number  %> 
+	 <%=   party.id  %> 
 	 </a>
    </li>
   <% end %> 

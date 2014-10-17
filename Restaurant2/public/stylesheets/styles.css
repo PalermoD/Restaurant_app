@@ -1,0 +1,46 @@
+header {
+	          text-align: center;
+			  background-size: 200px;
+			  font-family: helvetica;
+			  background:black;
+			  color:white;
+	  		  border: 7px solid red;
+	  		  border-radius: 20px;
+}
+
+
+a {
+	      text-align:center;
+	      display: inline;
+		  color:white;
+	      padding: 0px 10px 0px 10px;
+          font-family: helvetica;
+	    }
+
+
+h2 {
+	  font-family: helvetica;
+	  text-align: center;     
+}
+
+
+h1 {
+	font-family: helvetica;
+	color:white;
+	  
+}
+
+h2 {
+	color:white;
+}
+
+ul {
+	color:white;
+}
+
+body {
+	  background: url("http://luxfon.com/images/201301/luxfon.com_19287.jpg");
+	  background-size: 100%;
+}
+
+

@@ -1,4 +1,4 @@
-<h1>RESTAURANT APP</h1>
+<header><h1>RESTAURANT APP</h1></header> 
 
 <a href="/">Home</a>
 
@@ -17,10 +17,19 @@
 <h1>ORDERS PAGE</h1>
 
 <form action="/orders" method="post">
-	<input type="text" name= "order_id" placeholder="ORDER NUMBER" >
-	<input type="text" name="foods_id" placeholder="FOOD ID">
-	<input type="text" name="parties_id" placeholder= "PARTY ID">
+    <select name= "food_id">
+    	<% @foods.each do |food| %>
+			<option value= "<%= food.id %>" ><%= food.name %></option>
+        <% end %>
+	</select> 
+	<select name="party_id">
+        <% @parties.each do |party| %>
+        	
+		<option value="<%= party.id %>"><%= party.table_number %></option>
+        <% end %>
+	</select>
 	<input type="submit">
+
 </form>
 
 

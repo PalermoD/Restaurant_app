@@ -1,0 +1,35 @@
+<h1>RESTAURANT APP</h1>
+
+<a href="/">Home</a>
+
+<a href="/foods">Menu</a>
+
+<a href="/parties">Parties</a>
+
+<a href="/parties/new">New Party</a>
+
+<a href="/orders/new">New Order</a>
+
+<a href="/foods/new">New Food</a>
+
+<a href="/orders">Orders</a>
+
+<h1>ORDERS PAGE</h1>
+
+<form action="/orders" method="post">
+	<input type="text" name= "order_id" placeholder="ORDER NUMBER" >
+	<input type="text" name="foods_id" placeholder="FOOD ID">
+	<input type="text" name="parties_id" placeholder= "PARTY ID">
+	<input type="submit">
+</form>
+
+
+<ul>
+   <% @orders.each do |order| %> 
+    <li>
+     <a href="/orders/<%= order.id %>">
+	 <%=   order.id  %> 
+	 </a>
+   </li>
+  <% end %> 
+</ul>

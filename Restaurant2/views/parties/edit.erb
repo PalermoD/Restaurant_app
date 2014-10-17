@@ -1,0 +1,27 @@
+<h1>RESTAURANT APP</h1>
+
+
+
+<a href="/">Home</a>
+
+<a href="/foods">Menu</a>
+
+<a href="/parties">Parties</a>
+
+<a href="/parties/new">New Party</a>
+
+<a href="/orders/new">New Order</a>
+
+<a href="/foods/new">New Food</a>
+
+<a href="/orders">Orders</a>
+
+
+<form action="/parties/<%= @parties.id %>" method="post">
+	<input type="hidden" name="_method" value="patch">
+	<input type="text" name= "party_id" value= "<%= @parties.id %>" placeholder= "Party ID" >
+	<input type="text" name= "table_number"  value= "<%= @parties.table_number %>" placeholder= "Table Number" >
+	<input type="text" name= "guest_number" value= "<%= @parties.guest_number %>" placeholder= "Guest Number" > 
+	<input type="text" name="paid" value= "<%= @parties.paid %>" placeholder= "Paid?" >
+	<input type="submit">
+</form>

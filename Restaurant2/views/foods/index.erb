@@ -2,7 +2,6 @@
 
 
 
-
 <a href="/">Home</a>
 
 <a href="/foods">Menu</a>
@@ -17,13 +16,15 @@
 
 <a href="/orders">Orders</a>
 
-<h1>Parties</h1>
+<h1>Menu</h1> 
 <ul>
-   <% @parties.each do |party| %> 
+   <% @foods.each do |cusine| %> 
     <li>
-     Party<a href="/parties/<%= party.id %>">
-	 <%=   party.id  %> 
+     <a href="/foods/<%= cusine.id %>">
+	  <%=   cusine.id  %> <%=   cusine.name  %> 
 	 </a>
-   </li>
+   </li> 
   <% end %> 
 </ul>
+
+

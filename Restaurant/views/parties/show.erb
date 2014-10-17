@@ -17,13 +17,24 @@
 
 
 
+<h2>Party ID: <%= @parties.id %></h2> 
+<h2>Table Number: <%= @parties.table_number %></h2>
+<h2>Number of Guests: <%= @parties.guest_number %></h2>
+<h2>Paid: <%= @parties.paid %></h2>
+<h2><%= @foods.name %></h2>
+<h2><%= @foods.price %></h2>
 
-<h2><%= @parties.table_number %></h2>
-<h2><%= @parties.guest_number %></h2>
-<h2><%= @parties.paid %></h2>
 
-<a href="/parties/<%= @orders.id %>/receipt">Receipt</a>
 
+
+
+
+<form action="/foods" method="post">
+	
+	<input type="text" name="foods_id" placeholder="FOOD ID">
+	
+	<input type="submit">
+</form>
 
 
 
@@ -33,3 +44,4 @@
 	<input type="hidden" name="_method" value="delete">
 	<input type="submit" value="Delete!">
 </form>
+

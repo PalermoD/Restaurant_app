@@ -1,0 +1,37 @@
+<h1>RESTAURANT APP</h1>
+
+
+
+
+<a href="/">Home</a>
+
+<a href="/foods">Menu</a>
+
+<a href="/parties">Parties</a>
+
+<a href="/parties/new">New Party</a>
+
+<a href="/orders/new">New Order</a>
+
+<a href="/foods/new">New Food</a>
+
+<a href="/orders">Orders</a>
+
+<h1>NEW ORDER</h1>
+
+
+<form action="/orders" method="post">
+    <select name= "food_id">
+    	<% @foods.each do |food| %>
+			<option value= "<%= food.id %>" ><%= food.name %></option>
+        <% end %>
+	</select> 
+	<select name="party_id">
+        <% @parties.each do |party| %>
+        	
+		<option value="<%= party.id %>"><%= party.table_number %></option>
+        <% end %>
+	</select>
+	<input type="submit">
+
+</form>

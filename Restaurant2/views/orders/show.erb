@@ -1,0 +1,39 @@
+<h1>RESTAURANT APP</h1>
+
+
+
+<a href="/">Home</a>
+
+<a href="/foods">Menu</a>
+
+<a href="/parties">Parties</a>
+
+<a href="/parties/new">New Party</a>
+
+<a href="/orders/new">New Order</a>
+
+<a href="/foods/new">New Food</a>
+
+<a href="/orders">Orders</a>
+
+
+
+<h2><%= @order.id %></h2>
+<h2><%= @food.name %></h2> 
+<h2><%= @food.cusine_type %></h2>
+<h2><%= @food.price %></h2>
+<h2><%= @food.allergens %></h2>
+<h2><%= @party.table_number %></h2>
+<h2><%= @party.guest_number %></h2>
+<h2><%= @party.paid %></h2>
+
+
+
+<a href="/parties/<%= @order.id %>/receipt">Receipt</a>
+
+<a href="/orders/<%= @order.id %>/edit">Edit</a>
+
+<form action="/orders/<%= @order.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete!">
+</form>
